@@ -1,320 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth" id="top">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synth Visuals Space | AI Visual Tools & Design Software</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-color: #6366f1;
-            --accent-hover: #4f46e5;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            border-bottom: 1px solid #334155;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #fff;
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            color: var(--accent-color);
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        nav a:hover {
-            color: var(--text-color);
-        }
-
-        main {
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-            flex: 1;
-        }
-
-        .hero {
-            text-align: center;
-            margin-bottom: 3.5rem;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-        }
-
-        .hero p {
-            color: var(--text-muted);
-            font-size: 1.15rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Grid Otimizado para 3 colunas por linha */
-        .posts-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        /* Ajustes responsivos para telas menores */
-        @media (max-width: 1024px) {
-            .posts-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 640px) {
-            .posts-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .post-card {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid #334155;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .post-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-color);
-        }
-
-        /* Espaço da Imagem Quadrada */
-        .post-image {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            background-color: #334155;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            overflow: hidden;
-        }
-
-        .post-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .post-content {
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-
-        .post-tag {
-            align-self: flex-start;
-            background-color: rgba(99, 102, 241, 0.15);
-            color: var(--accent-color);
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            text-transform: uppercase;
-        }
-
-        .post-title {
-            font-size: 1.15rem;
-            margin-bottom: 0.75rem;
-            color: #fff;
-            line-height: 1.4;
-        }
-
-        .post-excerpt {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            flex: 1;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: #fff;
-            padding: 0.6rem 1.2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            text-align: center;
-            transition: background-color 0.2s;
-            margin-top: auto;
-        }
-
-        .btn:hover {
-            background-color: var(--accent-hover);
-        }
-
-        footer {
-            border-top: 1px solid #334155;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            margin-top: auto;
-        }
-
-        .footer-links {
-            margin-bottom: 1rem;
-        }
-
-        .footer-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin: 0 0.75rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--text-color);
-        }
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white min-h-screen flex flex-col justify-between">
 
-    <header>
-        <a href="index.html" class="logo">Synth Visuals <span>Space</span></a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="#reviews">Reviews</a>
-            <a href="privacy-policy.html">Privacy</a>
-            <a href="affiliate-disclosure.html">Disclosure</a>
-        </nav>
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="#top" class="flex items-center gap-2 font-bold text-xl tracking-tight text-slate-900">
+                    <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-black text-lg shadow-md shadow-emerald-200">S</span>
+                    <span>Synth Visuals <span class="text-emerald-600">Space</span></span>
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#top" class="hover:text-emerald-600 transition-colors">Home</a>
+                <a href="https://synthvisuals.space/#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
+                <a href="privacy-policy.html" class="hover:text-emerald-600 transition-colors">Privacy</a>
+                <a href="affiliate-disclosure.html" class="hover:text-emerald-600 transition-colors">Disclosure</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://synthvisuals.space/#reviews" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-semibold hover:bg-emerald-600 transition-all shadow-sm">
+                    <span>Explore Reviews</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Next-Gen Visual Tools & AI Software</h1>
-            <p>In-depth reviews, comparisons, and insights on the software shaping modern digital art and design.</p>
+    <!-- Main Content Container -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 flex-grow w-full">
+        
+        <!-- Hero Section -->
+        <section class="text-center max-w-3xl mx-auto mb-14">
+            <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-600 mb-4 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>Digital Art & AI Ecosystem</span>
+            </div>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+                Next-Gen Visual Tools & <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">AI Software</span>
+            </h1>
+            <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+                In-depth reviews, comparisons, and insights on the cutting-edge software shaping modern digital art and design.
+            </p>
         </section>
 
-        <section class="posts-grid" id="reviews">
+        <!-- Cards Grid (3 Columns) -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="reviews">
             
             <!-- Card 1: CorelDRAW 2026 -->
-            <article class="post-card">
-                <div class="post-image">[ Square Image Placeholder ]</div>
-                <div class="post-content">
-                    <span class="post-tag">Featured Review</span>
-                    <h2 class="post-title">CorelDRAW Graphics Suite 2026 Review: Unleashing Artist Intelligence</h2>
-                    <p class="post-excerpt">Discover how CorelDRAW 2026 balances generative assistance with human creative control in its newest release.</p>
-                    <a href="coreldraw-2026-review.html" class="btn">Read Review</a>
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
+                <div class="w-full aspect-square bg-slate-100 flex items-center justify-center border-b border-slate-100 relative overflow-hidden">
+                    <div class="text-slate-400 flex flex-col items-center gap-2 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-image text-3xl text-slate-300"></i>
+                        <span class="text-xs font-medium">Square Image Placeholder</span>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block self-start px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-3">
+                        Featured Review
+                    </span>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors leading-snug">
+                        CorelDRAW Graphics Suite 2026 Review: Unleashing Artist Intelligence
+                    </h2>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">
+                        Discover how CorelDRAW 2026 balances generative assistance with human creative control in its newest release.
+                    </p>
+                    <a href="coreldraw-2026-review.html" class="w-full py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-semibold text-xs text-center transition-colors shadow-sm flex items-center justify-center gap-2 mt-auto">
+                        <span>Read Review</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
             </article>
 
             <!-- Card 2 -->
-            <article class="post-card">
-                <div class="post-image">[ Square Image Placeholder ]</div>
-                <div class="post-content">
-                    <span class="post-tag">AI Tools</span>
-                    <h2 class="post-title">Top Vector AI Generators for Digital Illustrators in 2026</h2>
-                    <p class="post-excerpt">A comprehensive comparison of the leading AI engines generating clean SVG vector art directly from text prompts.</p>
-                    <a href="#" class="btn">Coming Soon</a>
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
+                <div class="w-full aspect-square bg-slate-100 flex items-center justify-center border-b border-slate-100 relative overflow-hidden">
+                    <div class="text-slate-400 flex flex-col items-center gap-2 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-vector-square text-3xl text-slate-300"></i>
+                        <span class="text-xs font-medium">Square Image Placeholder</span>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block self-start px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-3">
+                        AI Tools
+                    </span>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors leading-snug">
+                        Top Vector AI Generators for Digital Illustrators in 2026
+                    </h2>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">
+                        A comprehensive comparison of the leading AI engines generating clean SVG vector art directly from text prompts.
+                    </p>
+                    <span class="w-full py-2.5 px-4 rounded-xl bg-slate-100 text-slate-400 font-semibold text-xs text-center cursor-not-allowed mt-auto border border-slate-200">
+                        Coming Soon
+                    </span>
                 </div>
             </article>
 
             <!-- Card 3 -->
-            <article class="post-card">
-                <div class="post-image">[ Square Image Placeholder ]</div>
-                <div class="post-content">
-                    <span class="post-tag">Software Guide</span>
-                    <h2 class="post-title">Midjourney v7 vs Photoshop Generative Fill: Workflow Breakdown</h2>
-                    <p class="post-excerpt">Exploring which AI workflow delivers superior results for commercial design and visual layout production.</p>
-                    <a href="#" class="btn">Coming Soon</a>
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
+                <div class="w-full aspect-square bg-slate-100 flex items-center justify-center border-b border-slate-100 relative overflow-hidden">
+                    <div class="text-slate-400 flex flex-col items-center gap-2 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-layer-group text-3xl text-slate-300"></i>
+                        <span class="text-xs font-medium">Square Image Placeholder</span>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block self-start px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-3">
+                        Software Guide
+                    </span>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors leading-snug">
+                        Midjourney v7 vs Photoshop Generative Fill: Workflow Breakdown
+                    </h2>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">
+                        Exploring which AI workflow delivers superior results for commercial design and visual layout production.
+                    </p>
+                    <span class="w-full py-2.5 px-4 rounded-xl bg-slate-100 text-slate-400 font-semibold text-xs text-center cursor-not-allowed mt-auto border border-slate-200">
+                        Coming Soon
+                    </span>
                 </div>
             </article>
 
             <!-- Card 4 -->
-            <article class="post-card">
-                <div class="post-image">[ Square Image Placeholder ]</div>
-                <div class="post-content">
-                    <span class="post-tag">Design Hardware</span>
-                    <h2 class="post-title">Best Drawing Tablets for AI-Assisted Workflows in 2026</h2>
-                    <p class="post-excerpt">Evaluating pen displays and graphic tablets optimized for precision editing and high-resolution generative rendering.</p>
-                    <a href="#" class="btn">Coming Soon</a>
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
+                <div class="w-full aspect-square bg-slate-100 flex items-center justify-center border-b border-slate-100 relative overflow-hidden">
+                    <div class="text-slate-400 flex flex-col items-center gap-2 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-pen-clip text-3xl text-slate-300"></i>
+                        <span class="text-xs font-medium">Square Image Placeholder</span>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block self-start px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-3">
+                        Design Hardware
+                    </span>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors leading-snug">
+                        Best Drawing Tablets for AI-Assisted Workflows in 2026
+                    </h2>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">
+                        Evaluating pen displays and graphic tablets optimized for precision editing and high-resolution generative rendering.
+                    </p>
+                    <span class="w-full py-2.5 px-4 rounded-xl bg-slate-100 text-slate-400 font-semibold text-xs text-center cursor-not-allowed mt-auto border border-slate-200">
+                        Coming Soon
+                    </span>
                 </div>
             </article>
 
             <!-- Card 5 -->
-            <article class="post-card">
-                <div class="post-image">[ Square Image Placeholder ]</div>
-                <div class="post-content">
-                    <span class="post-tag">3D & Visual FX</span>
-                    <h2 class="post-title">Real-Time NeRF & Gaussian Splatting Tools for Digital Artists</h2>
-                    <p class="post-excerpt">How modern 3D capture algorithms are transforming asset creation for video games and virtual production.</p>
-                    <a href="#" class="btn">Coming Soon</a>
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
+                <div class="w-full aspect-square bg-slate-100 flex items-center justify-center border-b border-slate-100 relative overflow-hidden">
+                    <div class="text-slate-400 flex flex-col items-center gap-2 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-cube text-3xl text-slate-300"></i>
+                        <span class="text-xs font-medium">Square Image Placeholder</span>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block self-start px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-3">
+                        3D & Visual FX
+                    </span>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors leading-snug">
+                        Real-Time NeRF & Gaussian Splatting Tools for Digital Artists
+                    </h2>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">
+                        How modern 3D capture algorithms are transforming asset creation for video games and virtual production.
+                    </p>
+                    <span class="w-full py-2.5 px-4 rounded-xl bg-slate-100 text-slate-400 font-semibold text-xs text-center cursor-not-allowed mt-auto border border-slate-200">
+                        Coming Soon
+                    </span>
                 </div>
             </article>
 
             <!-- Card 6 -->
-            <article class="post-card">
-                <div class="post-image">[ Square Image Placeholder ]</div>
-                <div class="post-content">
-                    <span class="post-tag">Comparisons</span>
-                    <h2 class="post-title">Affinity Designer vs Illustrator 2026: The Perpetual License Debate</h2>
-                    <p class="post-excerpt">Analyzing features, performance, and long-term costs between subscription vs one-time purchase vector suites.</p>
-                    <a href="#" class="btn">Coming Soon</a>
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
+                <div class="w-full aspect-square bg-slate-100 flex items-center justify-center border-b border-slate-100 relative overflow-hidden">
+                    <div class="text-slate-400 flex flex-col items-center gap-2 group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-code-compare text-3xl text-slate-300"></i>
+                        <span class="text-xs font-medium">Square Image Placeholder</span>
+                    </div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <span class="inline-block self-start px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-3">
+                        Comparisons
+                    </span>
+                    <h2 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors leading-snug">
+                        Affinity Designer vs Illustrator 2026: The Perpetual License Debate
+                    </h2>
+                    <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">
+                        Analyzing features, performance, and long-term costs between subscription vs one-time purchase vector suites.
+                    </p>
+                    <span class="w-full py-2.5 px-4 rounded-xl bg-slate-100 text-slate-400 font-semibold text-xs text-center cursor-not-allowed mt-auto border border-slate-200">
+                        Coming Soon
+                    </span>
                 </div>
             </article>
 
         </section>
     </main>
 
-    <footer>
-        <div class="footer-links">
-            <a href="privacy-policy.html">Privacy Policy</a> | 
-            <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+    <!-- Footer -->
+    <footer class="mt-12 pt-8 pb-8 border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center gap-6 text-xs font-medium text-slate-500 mb-4">
+                <a href="#top" class="hover:text-emerald-600 transition-colors">Home</a>
+                <a href="https://synthvisuals.space/#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
+                <a href="privacy-policy.html" class="hover:text-emerald-600 transition-colors">Privacy Policy</a>
+                <a href="affiliate-disclosure.html" class="hover:text-emerald-600 transition-colors">Affiliate Disclosure</a>
+            </div>
+            <div class="text-xs text-slate-400">
+                © 2026 Synth Visuals Space. All rights reserved.
+            </div>
         </div>
-        <p>&copy; 2026 Synth Visuals Space. All rights reserved.</p>
     </footer>
 
 </body>
