@@ -75,7 +75,7 @@
 
         .hero {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3.5rem;
         }
 
         .hero h1 {
@@ -91,9 +91,10 @@
             margin: 0 auto;
         }
 
+        /* Grid de Artigos Lado a Lado */
         .posts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
         }
 
@@ -104,6 +105,31 @@
             border: 1px solid #334155;
             display: flex;
             flex-direction: column;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .post-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+        }
+
+        /* Espaço da Imagem Quadrada */
+        .post-image {
+            width: 100%;
+            aspect-ratio: 1 / 1; /* Força proporção perfeitamente quadrada (1:1) */
+            background-color: #334155;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            overflow: hidden;
+        }
+
+        .post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .post-content {
@@ -119,22 +145,22 @@
             color: var(--accent-color);
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem;
             text-transform: uppercase;
         }
 
         .post-title {
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             margin-bottom: 0.75rem;
             color: #fff;
-            text-decoration: none;
+            line-height: 1.4;
         }
 
         .post-excerpt {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-bottom: 1.5rem;
             flex: 1;
         }
@@ -150,6 +176,7 @@
             font-size: 0.9rem;
             text-align: center;
             transition: background-color 0.2s;
+            margin-top: auto;
         }
 
         .btn:hover {
@@ -198,8 +225,12 @@
         </section>
 
         <section class="posts-grid" id="reviews">
-            <!-- Article Card: CorelDRAW 2026 -->
+            
+            <!-- Artigo 1: CorelDRAW 2026 -->
             <article class="post-card">
+                <!-- Para adicionar imagem no futuro, substitua a div abaixo por:
+                     <div class="post-image"><img src="caminho-da-imagem.jpg" alt="CorelDRAW 2026"></div> -->
+                <div class="post-image">[ Square Image Placeholder ]</div>
                 <div class="post-content">
                     <span class="post-tag">Featured Review</span>
                     <h2 class="post-title">CorelDRAW Graphics Suite 2026 Review: Unleashing Artist Intelligence</h2>
@@ -207,6 +238,29 @@
                     <a href="coreldraw-2026-review.html" class="btn">Read Review</a>
                 </div>
             </article>
+
+            <!-- Card Exemplo 2 (Para visualizar o grid lado a lado) -->
+            <article class="post-card">
+                <div class="post-image">[ Square Image Placeholder ]</div>
+                <div class="post-content">
+                    <span class="post-tag">AI Tools</span>
+                    <h2 class="post-title">Top Vector AI Generators for Digital Illustrators in 2026</h2>
+                    <p class="post-excerpt">A comprehensive comparison of the leading AI engines generating clean SVG vector art directly from text prompts.</p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+            </article>
+
+            <!-- Card Exemplo 3 (Para visualizar o grid lado a lado) -->
+            <article class="post-card">
+                <div class="post-image">[ Square Image Placeholder ]</div>
+                <div class="post-content">
+                    <span class="post-tag">Software Guide</span>
+                    <h2 class="post-title">Midjourney v7 vs Photoshop Generative Fill: Workflow Breakdown</h2>
+                    <p class="post-excerpt">Exploring which AI workflow delivers superior results for commercial design and visual layout production.</p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+            </article>
+
         </section>
     </main>
 
