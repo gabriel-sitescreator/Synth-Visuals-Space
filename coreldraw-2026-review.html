@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR" class="scroll-smooth" id="top">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,17 +36,17 @@
     <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <a href="#" class="flex items-center gap-2 font-bold text-xl tracking-tight text-slate-900">
+                <a href="#top" class="flex items-center gap-2 font-bold text-xl tracking-tight text-slate-900">
                     <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-black text-lg shadow-md shadow-emerald-200">D</span>
                     <span>DesignTech<span class="text-emerald-600">Daily</span></span>
                 </a>
             </div>
             
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
-                <a href="/" class="hover:text-emerald-600 transition-colors">Home</a>
-                <a href="/reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
-                <a href="/privacy" class="hover:text-emerald-600 transition-colors">Privacy</a>
-                <a href="/disclosure" class="hover:text-emerald-600 transition-colors">Disclosure</a>
+                <a href="#top" class="hover:text-emerald-600 transition-colors">Home</a>
+                <a href="#verdict" class="hover:text-emerald-600 transition-colors">Reviews</a>
+                <a href="#sources-privacy" class="hover:text-emerald-600 transition-colors">Privacy</a>
+                <a href="#disclosure" class="hover:text-emerald-600 transition-colors">Disclosure</a>
             </nav>
 
             <div class="flex items-center gap-3">
@@ -116,7 +116,7 @@
         </section>
 
         <!-- Quick Verdict & Pros / Cons Widget -->
-        <section id="verdict" class="mb-14 p-6 sm:p-8 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+        <section id="verdict" class="mb-14 p-6 sm:p-8 rounded-2xl bg-white border border-slate-200/80 shadow-sm scroll-mt-20">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-200">
                 <div>
                     <span class="text-xs font-bold uppercase tracking-wider text-slate-500">Overall Rating</span>
@@ -444,16 +444,30 @@
             </div>
         </div>
 
-        <!-- Sources Box -->
+        <!-- Sources & Privacy Box -->
         <footer class="mt-12 pt-8 border-t border-slate-200">
-            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <div id="sources-privacy" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm mb-6 scroll-mt-20">
                 <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 flex items-center gap-1.5">
-                    <i class="fa-solid fa-shield-halved text-slate-400"></i> Sources & Methodology
+                    <i class="fa-solid fa-shield-halved text-slate-400"></i> Sources, Methodology & Privacy Policy
                 </h4>
-                <p class="text-xs text-slate-600 leading-relaxed mb-0">
+                <p class="text-xs text-slate-600 leading-relaxed mb-3">
                     Comprehensive review by Corel’s own product team; expert workflow analysis and benchmarks; and community insights for real-world pros and cons[cite: 3]. Each feature and claim is backed by official release notes and independent testing[cite: 3].
                 </p>
+                <p class="text-xs text-slate-500 leading-relaxed mb-0 border-t border-slate-100 pt-3">
+                    <strong>Privacy Note:</strong> DesignTechDaily respects your privacy. We do not collect personal identification data during your visit to this review page. Standard cookies may be used solely for session analytics and site navigation usability.
+                </p>
             </div>
+
+            <!-- Disclosure Section -->
+            <div id="disclosure" class="bg-slate-100/70 p-6 rounded-2xl border border-slate-200 shadow-sm scroll-mt-20">
+                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2 flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-info text-slate-400"></i> Affiliate & Editorial Disclosure
+                </h4>
+                <p class="text-xs text-slate-600 leading-relaxed mb-0">
+                    DesignTechDaily is an independent review platform. Some links on this page (such as free trial or purchase links) are affiliate links. If you click through and purchase a software license, we may earn a referral commission at no additional cost to you. Our editorial ratings and recommendations remain entirely unbiased and grounded in real-world technical performance evaluation.
+                </p>
+            </div>
+
             <div class="mt-8 text-center text-xs text-slate-400">
                 © 2026 DesignTechDaily. All trademarks belong to their respective owners.
             </div>
