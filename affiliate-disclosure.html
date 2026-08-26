@@ -1,63 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth" id="top">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Affiliate Disclosure | Synth Visuals Space</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-color: #6366f1;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.7; display: flex; flex-direction: column; min-height: 100vh; }
-        header { border-bottom: 1px solid #334155; padding: 1.5rem 2rem; max-width: 1200px; width: 100%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: -0.5px; }
-        .logo span { color: var(--accent-color); }
-        nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem; transition: color 0.2s; }
-        nav a:hover { color: var(--text-color); }
-        main { max-width: 1200px; width: 100%; margin: 0 auto; padding: 3rem 1.5rem; flex: 1; }
-        h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-        .date { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
-        h2 { font-size: 1.3rem; margin: 2rem 0 1rem 0; color: #fff; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; }
-        p { color: var(--text-muted); margin-bottom: 1rem; }
-        footer { border-top: 1px solid #334155; padding: 2rem 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: auto; }
-        footer a { color: var(--text-muted); text-decoration: none; margin: 0 0.5rem; }
-        footer a:hover { color: var(--text-color); }
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body>
-    <header>
-        <a href="index.html" class="logo">Synth Visuals <span>Space</span></a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html#reviews">Reviews</a>
-            <a href="privacy-policy.html">Privacy</a>
-            <a href="affiliate-disclosure.html">Disclosure</a>
-        </nav>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="index.html#top" class="flex items-center gap-2 font-bold text-xl tracking-tight text-slate-900">
+                    <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-black text-lg shadow-md shadow-emerald-200">S</span>
+                    <span>Synth Visuals <span class="text-emerald-600">Space</span></span>
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-emerald-600 transition-colors">Home</a>
+                <a href="https://synthvisuals.space/#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
+                <a href="privacy-policy.html" class="hover:text-emerald-600 transition-colors">Privacy</a>
+                <a href="affiliate-disclosure.html" class="text-emerald-600 font-semibold transition-colors">Disclosure</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://synthvisuals.space/#reviews" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-semibold hover:bg-emerald-600 transition-all shadow-sm">
+                    <span>Explore Reviews</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h1>Affiliate Disclosure</h1>
-        <p class="date">Last updated: August 2026</p>
+    <!-- Main Content Container -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 flex-grow w-full">
+        
+        <!-- Header Category & Title -->
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-600 mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-100">Legal Document</span>
+            <span>•</span>
+            <span class="text-slate-500">Updated August 2026</span>
+        </div>
 
-        <p>Transparency is essential for us at <strong>Synth Visuals Space</strong>. In compliance with Federal Trade Commission (FTC) guidelines and international advertising standards, please assume that any links leading to external products or software on this site are affiliate links.</p>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+            Affiliate Disclosure
+        </h1>
 
-        <h2>What Are Affiliate Links?</h2>
-        <p>When you click an affiliate link on Synth Visuals Space and make a purchase, we may receive a small commission from the merchant at <strong>no additional cost to you</strong>. The price you pay remains exactly the same whether you use our link or go directly to the vendor's website.</p>
+        <!-- Content Card Container -->
+        <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 sm:p-10 space-y-8 text-slate-700 leading-relaxed">
+            
+            <p class="text-base sm:text-lg text-slate-600 border-b border-slate-100 pb-6">
+                Transparency is essential for us at <strong>Synth Visuals Space</strong>. In compliance with Federal Trade Commission (FTC) guidelines and international advertising standards, please assume that any links leading to external products or software on this site are affiliate links.
+            </p>
 
-        <h2>Our Commitment to Quality</h2>
-        <p>We only review, recommend, and feature visual design software, AI platforms, and creative tools that we believe provide real value to digital creators. Our opinions and reviews are independent, objective, and driven by our commitment to delivering honest information to our audience.</p>
+            <!-- Section 1 -->
+            <section>
+                <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="text-emerald-600 font-extrabold"><i class="fa-solid fa-link text-lg"></i></span> What Are Affiliate Links?
+                </h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    When you click an affiliate link on Synth Visuals Space and make a purchase, we may receive a small commission from the merchant at <strong>no additional cost to you</strong>. The price you pay remains exactly the same whether you use our link or go directly to the vendor's website.
+                </p>
+            </section>
 
-        <h2>Questions?</h2>
-        <p>If you have any questions regarding our affiliate relationships, please feel free to reach out to us through our primary communication channels.</p>
+            <!-- Section 2 -->
+            <section class="pt-4 border-t border-slate-100">
+                <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="text-emerald-600 font-extrabold"><i class="fa-solid fa-shield-halved text-lg"></i></span> Our Commitment to Quality
+                </h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    We only review, recommend, and feature visual design software, AI platforms, and creative tools that we believe provide real value to digital creators. Our opinions and reviews are independent, objective, and driven by our commitment to delivering honest information to our audience.
+                </p>
+            </section>
+
+            <!-- Section 3 -->
+            <section class="pt-4 border-t border-slate-100">
+                <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="text-emerald-600 font-extrabold"><i class="fa-solid fa-circle-question text-lg"></i></span> Questions?
+                </h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    If you have any questions regarding our affiliate relationships, please feel free to reach out to us through our primary communication channels.
+                </p>
+            </section>
+
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Synth Visuals Space. <a href="index.html">Home</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    <!-- Footer -->
+    <footer class="mt-12 pt-8 pb-8 border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center gap-6 text-xs font-medium text-slate-500 mb-4">
+                <a href="index.html" class="hover:text-emerald-600 transition-colors">Home</a>
+                <a href="https://synthvisuals.space/#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
+                <a href="privacy-policy.html" class="hover:text-emerald-600 transition-colors">Privacy Policy</a>
+                <a href="affiliate-disclosure.html" class="hover:text-emerald-600 transition-colors">Affiliate Disclosure</a>
+            </div>
+            <div class="text-xs text-slate-400">
+                © 2026 Synth Visuals Space. All rights reserved.
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
