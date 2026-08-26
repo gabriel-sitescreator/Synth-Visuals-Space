@@ -91,11 +91,24 @@
             margin: 0 auto;
         }
 
-        /* Grid de Artigos Lado a Lado */
+        /* Grid Otimizado para 3 colunas por linha */
         .posts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
+        }
+
+        /* Ajustes responsivos para telas menores */
+        @media (max-width: 1024px) {
+            .posts-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .posts-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .post-card {
@@ -116,7 +129,7 @@
         /* Espaço da Imagem Quadrada */
         .post-image {
             width: 100%;
-            aspect-ratio: 1 / 1; /* Força proporção perfeitamente quadrada (1:1) */
+            aspect-ratio: 1 / 1;
             background-color: #334155;
             display: flex;
             align-items: center;
@@ -152,7 +165,7 @@
         }
 
         .post-title {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             margin-bottom: 0.75rem;
             color: #fff;
             line-height: 1.4;
@@ -226,10 +239,8 @@
 
         <section class="posts-grid" id="reviews">
             
-            <!-- Artigo 1: CorelDRAW 2026 -->
+            <!-- Card 1: CorelDRAW 2026 -->
             <article class="post-card">
-                <!-- Para adicionar imagem no futuro, substitua a div abaixo por:
-                     <div class="post-image"><img src="caminho-da-imagem.jpg" alt="CorelDRAW 2026"></div> -->
                 <div class="post-image">[ Square Image Placeholder ]</div>
                 <div class="post-content">
                     <span class="post-tag">Featured Review</span>
@@ -239,7 +250,7 @@
                 </div>
             </article>
 
-            <!-- Card Exemplo 2 (Para visualizar o grid lado a lado) -->
+            <!-- Card 2 -->
             <article class="post-card">
                 <div class="post-image">[ Square Image Placeholder ]</div>
                 <div class="post-content">
@@ -250,13 +261,46 @@
                 </div>
             </article>
 
-            <!-- Card Exemplo 3 (Para visualizar o grid lado a lado) -->
+            <!-- Card 3 -->
             <article class="post-card">
                 <div class="post-image">[ Square Image Placeholder ]</div>
                 <div class="post-content">
                     <span class="post-tag">Software Guide</span>
                     <h2 class="post-title">Midjourney v7 vs Photoshop Generative Fill: Workflow Breakdown</h2>
                     <p class="post-excerpt">Exploring which AI workflow delivers superior results for commercial design and visual layout production.</p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="post-card">
+                <div class="post-image">[ Square Image Placeholder ]</div>
+                <div class="post-content">
+                    <span class="post-tag">Design Hardware</span>
+                    <h2 class="post-title">Best Drawing Tablets for AI-Assisted Workflows in 2026</h2>
+                    <p class="post-excerpt">Evaluating pen displays and graphic tablets optimized for precision editing and high-resolution generative rendering.</p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="post-card">
+                <div class="post-image">[ Square Image Placeholder ]</div>
+                <div class="post-content">
+                    <span class="post-tag">3D & Visual FX</span>
+                    <h2 class="post-title">Real-Time NeRF & Gaussian Splatting Tools for Digital Artists</h2>
+                    <p class="post-excerpt">How modern 3D capture algorithms are transforming asset creation for video games and virtual production.</p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+            </article>
+
+            <!-- Card 6 -->
+            <article class="post-card">
+                <div class="post-image">[ Square Image Placeholder ]</div>
+                <div class="post-content">
+                    <span class="post-tag">Comparisons</span>
+                    <h2 class="post-title">Affinity Designer vs Illustrator 2026: The Perpetual License Debate</h2>
+                    <p class="post-excerpt">Analyzing features, performance, and long-term costs between subscription vs one-time purchase vector suites.</p>
                     <a href="#" class="btn">Coming Soon</a>
                 </div>
             </article>
