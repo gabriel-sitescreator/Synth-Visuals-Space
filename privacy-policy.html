@@ -1,68 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth" id="top">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | Synth Visuals Space</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-color: #6366f1;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.7; display: flex; flex-direction: column; min-height: 100vh; }
-        header { border-bottom: 1px solid #334155; padding: 1.5rem 2rem; max-width: 1200px; width: 100%; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.5rem; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: -0.5px; }
-        .logo span { color: var(--accent-color); }
-        nav a { color: var(--text-muted); text-decoration: none; margin-left: 1.5rem; font-size: 0.95rem; transition: color 0.2s; }
-        nav a:hover { color: var(--text-color); }
-        main { max-width: 1200px; width: 100%; margin: 0 auto; padding: 3rem 1.5rem; flex: 1; }
-        h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-        .date { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem; }
-        h2 { font-size: 1.3rem; margin: 2rem 0 1rem 0; color: #fff; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; }
-        p { color: var(--text-muted); margin-bottom: 1rem; }
-        ul { margin: 1rem 0 1rem 2rem; color: var(--text-muted); }
-        li { margin-bottom: 0.5rem; }
-        footer { border-top: 1px solid #334155; padding: 2rem 1.5rem; text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: auto; }
-        footer a { color: var(--text-muted); text-decoration: none; margin: 0 0.5rem; }
-        footer a:hover { color: var(--text-color); }
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body>
-    <header>
-        <a href="index.html" class="logo">Synth Visuals <span>Space</span></a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="index.html#reviews">Reviews</a>
-            <a href="privacy-policy.html">Privacy</a>
-            <a href="affiliate-disclosure.html">Disclosure</a>
-        </nav>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white min-h-screen flex flex-col justify-between">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="index.html#top" class="flex items-center gap-2 font-bold text-xl tracking-tight text-slate-900">
+                    <span class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center font-black text-lg shadow-md shadow-emerald-200">S</span>
+                    <span>Synth Visuals <span class="text-emerald-600">Space</span></span>
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-emerald-600 transition-colors">Home</a>
+                <a href="https://synthvisuals.space/#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
+                <a href="privacy-policy.html" class="text-emerald-600 font-semibold transition-colors">Privacy</a>
+                <a href="affiliate-disclosure.html" class="hover:text-emerald-600 transition-colors">Disclosure</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://synthvisuals.space/#reviews" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-semibold hover:bg-emerald-600 transition-all shadow-sm">
+                    <span>Explore Reviews</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <h1>Privacy Policy</h1>
-        <p class="date">Last updated: August 2026</p>
+    <!-- Main Content Container -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 flex-grow w-full">
+        
+        <!-- Header Category & Title -->
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-emerald-600 mb-4">
+            <span class="px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-100">Legal Document</span>
+            <span>•</span>
+            <span class="text-slate-500">Updated August 2026</span>
+        </div>
 
-        <p>At <strong>Synth Visuals Space</strong>, accessible from https://synthvisuals.space, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Synth Visuals Space and how we use it.</p>
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight mb-6">
+            Privacy Policy
+        </h1>
 
-        <h2>1. Log Files</h2>
-        <p>Synth Visuals Space follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting services do this as part of hosting services' analytics. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
+        <!-- Content Card Container -->
+        <div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 sm:p-10 space-y-8 text-slate-700 leading-relaxed">
+            
+            <p class="text-base sm:text-lg text-slate-600 border-b border-slate-100 pb-6">
+                At <strong>Synth Visuals Space</strong>, accessible from <a href="https://synthvisuals.space" class="text-emerald-600 font-medium hover:underline">https://synthvisuals.space</a>, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Synth Visuals Space and how we use it.
+            </p>
 
-        <h2>2. Cookies and Web Beacons</h2>
-        <p>Like any other website, Synth Visuals Space uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+            <!-- Section 1 -->
+            <section>
+                <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="text-emerald-600 font-extrabold">1.</span> Log Files
+                </h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Synth Visuals Space follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting services do this as part of hosting services' analytics. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.
+                </p>
+            </section>
 
-        <h2>3. Third-Party Partners and Affiliate Links</h2>
-        <p>Our website contains affiliate links to third-party services and vendors (such as software creators and affiliate networks). When you click on these links, third-party cookies may be placed on your browser to track referrals for commission purposes. We do not have control over cookies used by third-party advertisers or partner sites.</p>
+            <!-- Section 2 -->
+            <section class="pt-4 border-t border-slate-100">
+                <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="text-emerald-600 font-extrabold">2.</span> Cookies and Web Beacons
+                </h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Like any other website, Synth Visuals Space uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
+                </p>
+            </section>
 
-        <h2>4. Consent</h2>
-        <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+            <!-- Section 3 -->
+            <section class="pt-4 border-t border-slate-100">
+                <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="text-emerald-600 font-extrabold">3.</span> Third-Party Partners and Affiliate Links
+                </h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    Our website contains affiliate links to third-party services and vendors (such as software creators and affiliate networks). When you click on these links, third-party cookies may be placed on your browser to track referrals for commission purposes. We do not have control over cookies used by third-party advertisers or partner sites.
+                </p>
+            </section>
+
+            <!-- Section 4 -->
+            <section class="pt-4 border-t border-slate-100">
+                <h2 class="text-xl font-bold text-slate-900 mb-3 flex items-center gap-2">
+                    <span class="text-emerald-600 font-extrabold">4.</span> Consent
+                </h2>
+                <p class="text-slate-600 text-sm leading-relaxed">
+                    By using our website, you hereby consent to our Privacy Policy and agree to its terms.
+                </p>
+            </section>
+
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Synth Visuals Space. <a href="index.html">Home</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="affiliate-disclosure.html">Affiliate Disclosure</a></p>
+    <!-- Footer -->
+    <footer class="mt-12 pt-8 pb-8 border-t border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center gap-6 text-xs font-medium text-slate-500 mb-4">
+                <a href="index.html" class="hover:text-emerald-600 transition-colors">Home</a>
+                <a href="https://synthvisuals.space/#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
+                <a href="privacy-policy.html" class="hover:text-emerald-600 transition-colors">Privacy Policy</a>
+                <a href="affiliate-disclosure.html" class="hover:text-emerald-600 transition-colors">Affiliate Disclosure</a>
+            </div>
+            <div class="text-xs text-slate-400">
+                © 2026 Synth Visuals Space. All rights reserved.
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
