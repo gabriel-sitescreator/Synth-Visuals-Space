@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" id="top">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) – placeholder, will remain in source for analytics integration -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XGHTDYZ8DD"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-XGHTDYZ8DD');
     </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Synth Visuals Space | AI Visual Tools & Design Software</title>
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +24,13 @@
     
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .card-hover {
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px -8px rgba(0, 0, 0, 0.08), 0 4px 10px -4px rgba(0,0,0,0.05);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-500 selection:text-white min-h-screen flex flex-col justify-between">
@@ -41,13 +47,13 @@
             
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
                 <a href="#top" class="hover:text-emerald-600 transition-colors">Home</a>
-                <a href="https://synthvisuals.space/#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
+                <a href="#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
                 <a href="privacy-policy.html" class="hover:text-emerald-600 transition-colors">Privacy</a>
                 <a href="affiliate-disclosure.html" class="hover:text-emerald-600 transition-colors">Disclosure</a>
             </nav>
 
             <div class="flex items-center gap-3">
-                <a href="https://synthvisuals.space/#reviews" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-semibold hover:bg-emerald-600 transition-all shadow-sm">
+                <a href="#reviews" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-white text-xs font-semibold hover:bg-emerald-600 transition-all shadow-sm">
                     <span>Explore Reviews</span>
                     <i class="fa-solid fa-arrow-right text-xs"></i>
                 </a>
@@ -55,7 +61,7 @@
         </div>
     </header>
 
-    <!-- Main Content Container -->
+    <!-- Main Content -->
     <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 flex-grow w-full">
         
         <!-- Hero Section -->
@@ -72,12 +78,11 @@
             </p>
         </section>
 
-        <!-- Cards Grid (3 Columns) -->
+        <!-- Cards Grid -->
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="reviews">
             
             <!-- Card 1: CorelDRAW 2026 -->
-            <article class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
-                <!-- Conteúdo do Card -->
+            <article class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group card-hover">
                 <div class="p-5 flex flex-col flex-grow">
                     <div class="mb-3">
                         <span class="inline-block bg-emerald-600 text-white text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
@@ -102,8 +107,8 @@
                 </div>
             </article>
 
-            <!-- Card 2: Agora com link ativo para o artigo de Vector AI Generators -->
-            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
+            <!-- Card 2: Top Vector AI Generators -->
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group card-hover">
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="inline-block self-start px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-3">
                         AI Tools
@@ -126,26 +131,32 @@
                 </div>
             </article>
 
-            <!-- Card 3 -->
-            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
+            <!-- Card 3: Midjourney vs Photoshop – AGORA COM LINK ATIVO -->
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group card-hover">
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="inline-block self-start px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-3">
                         Software Guide
                     </span>
                     <h2 class="text-xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors leading-snug">
-                        Midjourney v7 vs Photoshop Generative Fill: Workflow Breakdown
+                        <a href="https://synthvisuals.space/MidjourneyV7-vs-PhotoshopGenerativeFill.html" class="hover:text-emerald-600 transition-colors">
+                            Midjourney v7 vs Photoshop Generative Fill: Workflow Breakdown
+                        </a>
                     </h2>
                     <p class="text-slate-600 text-sm mb-6 leading-relaxed flex-grow">
                         Exploring which AI workflow delivers superior results for commercial design and visual layout production.
                     </p>
-                    <span class="w-full py-2.5 px-4 rounded-xl bg-slate-100 text-slate-400 font-semibold text-xs text-center cursor-not-allowed mt-auto border border-slate-200">
-                        Coming Soon
-                    </span>
+                    <div class="mt-auto flex items-center justify-between text-xs text-slate-500 pt-4 border-t border-slate-100">
+                        <span>10 min read</span>
+                        <a href="https://synthvisuals.space/MidjourneyV7-vs-PhotoshopGenerativeFill.html" class="font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1">
+                            <span>Read Review</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
                 </div>
             </article>
 
-            <!-- Card 4 -->
-            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
+            <!-- Card 4: Best Drawing Tablets -->
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group card-hover">
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="inline-block self-start px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-3">
                         Design Hardware
@@ -162,8 +173,8 @@
                 </div>
             </article>
 
-            <!-- Card 5 -->
-            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
+            <!-- Card 5: 3D & Visual FX -->
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group card-hover">
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="inline-block self-start px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-3">
                         3D & Visual FX
@@ -180,8 +191,8 @@
                 </div>
             </article>
 
-            <!-- Card 6 -->
-            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group">
+            <!-- Card 6: Affinity vs Illustrator -->
+            <article class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col hover:border-emerald-500 hover:shadow-md transition-all group card-hover">
                 <div class="p-6 flex flex-col flex-grow">
                     <span class="inline-block self-start px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-wider mb-3">
                         Comparisons
@@ -206,7 +217,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex justify-center gap-6 text-xs font-medium text-slate-500 mb-4">
                 <a href="#top" class="hover:text-emerald-600 transition-colors">Home</a>
-                <a href="https://synthvisuals.space/#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
+                <a href="#reviews" class="hover:text-emerald-600 transition-colors">Reviews</a>
                 <a href="privacy-policy.html" class="hover:text-emerald-600 transition-colors">Privacy Policy</a>
                 <a href="affiliate-disclosure.html" class="hover:text-emerald-600 transition-colors">Affiliate Disclosure</a>
             </div>
